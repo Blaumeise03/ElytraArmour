@@ -37,6 +37,12 @@
             <version>1.14.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency-->
+        <!--Craftbukkit and NMS dep - install from Spigot BuildTools-->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit</artifactId>
+            <version>1.14.4-R0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
