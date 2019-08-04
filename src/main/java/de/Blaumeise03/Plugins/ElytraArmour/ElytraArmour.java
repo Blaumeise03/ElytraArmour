@@ -13,7 +13,7 @@ public class ElytraArmour extends JavaPlugin {
         getLogger().info("Starting ElytraArmour...");
         plugin = this;
         getServer().getPluginManager().registerEvents(new CraftingListener(), this);
-        getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        //getServer().getPluginManager().registerEvents(new JoinListener(), this);
         //getServer().getPluginManager().registerEvents(new ElytraArmour(), this);
         getLogger().info("ElytraArmour enabled! Have Fun with it!");
     }
