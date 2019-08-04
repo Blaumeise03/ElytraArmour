@@ -1,0 +1,8 @@
+main: de.Blaumeise03.Plugins.ElytraArmour.ElytraArmour
+name: ElytraArmour
+version: 1.0-Release
+api-version: 1.13
+description: Adds advanced Elytras.
+load: POSTWORLD
+author: Blaumeise03
+prefix: ElytraArmour
