@@ -1,4 +1,4 @@
-package de.Blaumeise03.Plugins.ElytraArmour;
+/*package de.Blaumeise03.Plugins.ElytraArmour;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -16,12 +16,12 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
         if(!welcomeMessageSent){
-            Bukkit.broadcastMessage("§aElytraArmour ist installiert! Du kannst deine Elytren mit einer RÜstung vercraften und so eine stärkere bekommen!");
-            welcomeMessageSent = true;
+            //Bukkit.broadcastMessage("§aElytraArmour ist installiert! Du kannst deine Elytren mit einer RÜstung vercraften und so eine stärkere bekommen!");
+            //welcomeMessageSent = true;
         }
         if(!welcomeMessage.contains(e.getPlayer())){
-            welcomeMessage.add(e.getPlayer());
-            e.getPlayer().sendMessage("§aElytraArmour ist installiert! Plugin von §4Blaumeise03");
+            //welcomeMessage.add(e.getPlayer());
+            //e.getPlayer().sendMessage("§aElytraArmour ist installiert! Plugin von §4Blaumeise03");
         }
     }
-}
+}*/

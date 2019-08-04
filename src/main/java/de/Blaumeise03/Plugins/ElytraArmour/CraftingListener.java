@@ -8,16 +8,15 @@ import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.*;
-import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.inventory.CraftItemEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 public class CraftingListener implements Listener {
 
@@ -53,7 +52,8 @@ public class CraftingListener implements Listener {
                     else if (!chest && stack.getType() == Material.DIAMOND_CHESTPLATE
                             || stack.getType() == Material.IRON_CHESTPLATE
                             || stack.getType() == Material.GOLDEN_CHESTPLATE
-                            || stack.getType() == Material.LEATHER_CHESTPLATE) chest = true;
+                            || stack.getType() == Material.LEATHER_CHESTPLATE
+                            || stack.getType() == Material.CHAINMAIL_CHESTPLATE) chest = true;
                     else recCorrect = false;
                 }
 
@@ -76,7 +76,8 @@ public class CraftingListener implements Listener {
                             else if (!chest && (stack.getType() == Material.DIAMOND_CHESTPLATE
                                     || stack.getType() == Material.IRON_CHESTPLATE
                                     || stack.getType() == Material.GOLDEN_CHESTPLATE
-                                    || stack.getType() == Material.LEATHER_CHESTPLATE)) chest = true;
+                                    || stack.getType() == Material.LEATHER_CHESTPLATE
+                                    || stack.getType() == Material.CHAINMAIL_CHESTPLATE)) chest = true;
                             else recCorrect = false;
                         }
                     }
@@ -101,7 +102,8 @@ public class CraftingListener implements Listener {
                                         if (player.getOpenInventory().getItem(i).getType() == Material.DIAMOND_CHESTPLATE
                                         || player.getOpenInventory().getItem(i).getType() == Material.IRON_CHESTPLATE
                                         || player.getOpenInventory().getItem(i).getType() == Material.GOLDEN_CHESTPLATE
-                                        || player.getOpenInventory().getItem(i).getType() == Material.LEATHER_CHESTPLATE) {
+                                                || player.getOpenInventory().getItem(i).getType() == Material.LEATHER_CHESTPLATE
+                                                || player.getOpenInventory().getItem(i).getType() == Material.CHAINMAIL_CHESTPLATE) {
                                             plate = player.getOpenInventory().getItem(i);
                                         }
                                 }
@@ -184,7 +186,7 @@ public class CraftingListener implements Listener {
 
     @EventHandler
     public void onCraft(CraftItemEvent e){
-        Bukkit.broadcastMessage("T");
+        //Bukkit.broadcastMessage("T");
         try {
             if(e.getRecipe().getResult().getItemMeta().getLore().contains("§4Kostet §a30 Level§4!")){
                 ((Player)e.getWhoClicked()).setLevel(((Player)e.getWhoClicked()).getLevel() - 30);
