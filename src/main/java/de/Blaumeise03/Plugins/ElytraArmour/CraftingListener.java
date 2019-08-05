@@ -210,7 +210,8 @@ public class CraftingListener implements Listener {
 
                         } else {
                             player.sendMessage("§4Du benötigst 30 Level um dies zu zun!");
-                            player.closeInventory();
+                            ((CraftingInventory) player.getOpenInventory().getTopInventory()).setResult(null);
+                            //player.closeInventory();
                         }
                     }//else Bukkit.broadcastMessage("Incorrect");
                 }
